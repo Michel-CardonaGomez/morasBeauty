@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Servicio {
+  id          String   @id @default(uuid())
+  nombre      String
+  descripcion String?
+  precio      Decimal
+  duracionMin Int      @map("duracion_min")
+  activo      Boolean  @default(true)
+  creadoEn    DateTime @default(now()) @map("creado_en")
+
+  fotos ServicioFoto[]
+
+  @@map("servicios")
+}
+
+model ServicioFoto {
+  id         String   @id @default(uuid())
+  servicioId String   @map("servicio_id")
+  url        String
+  publicId   String
+  orden      Int      @default(0)
+
+  servicio Servicio @relation(fields: [servicioId], references: [id])
+
+  @@map("servicio_fotos")
+}
