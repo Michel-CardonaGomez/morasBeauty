@@ -1,0 +1,61 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Usuario {
+  id           String   @id @default(uuid())
+  nombre       String
+  email        String   @unique
+  telefono     String?
+  passwordHash String   @map("password_hash")
+  rol          Rol      @default(cliente)
+  activo       Boolean  @default(true)
+  creadoEn     DateTime @default(now()) @map("creado_en")
+
+  horarios  HorarioEmpleado[]
+  servicios EmpleadoServicio[]
+
+  @@map("usuarios")
+}
+
+model HorarioEmpleado {
+  id         String    @id @default(uuid())
+  empleadoId String    @map("empleado_id")
+  diaSemana  DiaSemana @map("dia_semana")
+  horaInicio String    @map("hora_inicio")
+  horaFin    String    @map("hora_fin")
+
+  empleado Usuario @relation(fields: [empleadoId], references: [id])
+
+  @@map("horarios_empleado")
+}
+
+model EmpleadoServicio {
+  empleadoId String @map("empleado_id")
+  servicioId String @map("servicio_id")
+
+  empleado Usuario @relation(fields: [empleadoId], references: [id])
+
+  @@id([empleadoId, servicioId])
+  @@map("empleado_servicio")
+}
+
+enum Rol {
+  cliente
+  empleado
+  admin
+}
+
+enum DiaSemana {
+  lunes
+  martes
+  miercoles
+  jueves
+  viernes
+  sabado
+  domingo
+}
