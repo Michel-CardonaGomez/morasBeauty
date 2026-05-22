@@ -1,0 +1,119 @@
+.miscitas-page { min-height: 100vh; }
+
+.miscitas-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 48px;
+}
+
+.miscitas-container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.miscitas-vacio {
+  text-align: center;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: var(--gris);
+}
+
+.citas-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cita-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: var(--blanco);
+  border: 1px solid var(--dorado-claro);
+  padding: 20px 24px;
+}
+
+.cita-fecha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 52px;
+  padding-right: 24px;
+  border-right: 1px solid var(--dorado-claro);
+}
+
+.cita-dia {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--dorado);
+  line-height: 1;
+}
+
+.cita-mes {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gris);
+}
+
+.cita-info { flex: 1; }
+
+.cita-hora {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.cita-servicio {
+  font-size: 0.82rem;
+  color: var(--gris);
+  margin-bottom: 10px;
+}
+
+.cita-notas {
+  font-size: 0.8rem;
+  color: var(--gris);
+  font-style: italic;
+}
+
+.cita-empleado {
+  font-size: 0.8rem;
+  color: var(--gris);
+  margin-bottom: 10px;
+}
+
+.cita-acciones {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.badge {
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.badge-pendiente  { background: #FFF8E1; color: #B8860B; }
+.badge-completada { background: #E8F5E9; color: #2D7A4F; }
+.badge-cancelada  { background: #FFEBEE; color: #D64545; }
+
+.btn-cancelar {
+  font-size: 0.75rem;
+  padding: 6px 14px;
+  color: var(--error);
+  border-color: var(--error);
+}
+
+.btn-cancelar:hover {
+  background: var(--error);
+  color: var(--blanco);
+}

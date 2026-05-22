@@ -1,0 +1,411 @@
+.admin-page {
+  min-height: 100vh;
+}
+
+.admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.admin-header h1 {
+  font-size: 2.2rem;
+}
+
+.admin-header .btn-dorado {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* TABLA */
+.admin-tabla {
+  border: 1px solid var(--dorado-claro);
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.tabla-head {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 1fr 1fr 1fr 1fr;
+  padding: 12px 20px;
+  background: var(--crema-oscuro);
+  border-bottom: 1px solid var(--dorado-claro);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--gris);
+}
+
+.tabla-citas {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1.5fr 1fr;
+}
+
+.tabla-fila {
+  display: grid;
+  padding: 14px 20px;
+  align-items: center;
+  grid-template-columns: 2fr 1.5fr 1fr 1fr 1fr 1fr;
+  border-bottom: 1px solid var(--dorado-claro);
+  font-size: 0.85rem;
+  gap: 8px;
+  transition: background 0.15s;
+}
+
+.tabla-fila-citas {
+  display: grid;
+  padding: 14px 20px;
+  align-items: center;
+  border-bottom: 1px solid var(--dorado-claro);
+  font-size: 0.85rem;
+  transition: background 0.15s;
+}
+
+.tabla-fila:hover,
+.tabla-fila-citas:hover {
+  background: var(--crema);
+}
+.tabla-fila:last-child,
+.tabla-fila-citas:last-child {
+  border-bottom: none;
+}
+
+.tabla-nombre {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.tabla-thumb {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border: 1px solid var(--dorado-claro);
+  flex-shrink: 0;
+}
+
+.tabla-nombre-text {
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+}
+
+.tabla-desc {
+  font-size: 0.75rem;
+  color: var(--gris);
+}
+
+.tabla-email {
+  font-size: 0.8rem;
+  color: var(--gris);
+}
+.tabla-notas {
+  font-size: 0.78rem;
+  color: var(--gris);
+}
+
+.tabla-acciones {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gris-claro);
+  border: none;
+  cursor: pointer;
+  color: var(--negro);
+  transition: background 0.2s;
+  border-radius: 2px;
+}
+
+.btn-icon:hover {
+  background: var(--dorado-claro);
+}
+.btn-danger:hover {
+  background: #ffebee;
+  color: var(--error);
+}
+
+.tabla-vacio {
+  padding: 40px;
+  text-align: center;
+  color: var(--gris);
+  font-style: italic;
+}
+
+/* FOTOS */
+.fotos-lista {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.foto-chip {
+  position: relative;
+  width: 36px;
+  height: 36px;
+}
+
+.foto-chip img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 1px solid var(--dorado-claro);
+}
+
+.foto-chip button {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--error);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* MÉTRICAS */
+.metricas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.metrica {
+  background: var(--blanco);
+  border: 1px solid var(--dorado-claro);
+  padding: 20px;
+  text-align: center;
+}
+
+.metrica-num {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.5rem;
+  color: var(--dorado);
+  line-height: 1;
+}
+
+.metrica-label {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--gris);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 6px;
+}
+
+/* FILTROS */
+.filtros {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.filtros select,
+.filtros input {
+  width: auto;
+  padding: 8px 12px;
+  font-size: 0.85rem;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 24px;
+}
+
+.modal {
+  background: var(--blanco);
+  width: 100%;
+  max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-grande {
+  max-width: 680px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--dorado-claro);
+}
+
+.modal-header h2 {
+  font-size: 1.4rem;
+}
+.modal-header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--gris);
+}
+
+.modal-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-footer {
+  padding: 16px 24px;
+  border-top: 1px solid var(--dorado-claro);
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.upload-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px dashed var(--dorado);
+  color: var(--dorado);
+  cursor: pointer;
+  font-size: 0.82rem;
+  transition: background 0.2s;
+}
+
+.upload-btn:hover {
+  background: var(--crema-oscuro);
+}
+.foto-nombre {
+  font-size: 0.78rem;
+  color: var(--gris);
+  margin-top: 4px;
+}
+
+/* HORARIOS */
+.dias-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dia-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.dia-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  min-width: 60px;
+  cursor: pointer;
+}
+
+.hora-inputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--gris);
+}
+
+.hora-inputs input {
+  width: auto;
+  padding: 6px 10px;
+  font-size: 0.82rem;
+}
+
+/* SERVICIOS CHECK */
+.servicios-check {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.servicio-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  padding: 6px;
+  border: 1px solid var(--dorado-claro);
+}
+
+.servicio-check:hover {
+  background: var(--crema);
+}
+
+/* DIAS CHIPS */
+.dias-chips {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.dia-chip {
+  background: var(--dorado-claro);
+  color: var(--dorado-oscuro);
+  font-size: 0.68rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+
+.btn-success:hover {
+  background: #e8f5e9;
+  color: var(--exito);
+}
+
+.password-hints {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.hint {
+  font-size: 0.72rem;
+  color: var(--gris);
+  transition: color 0.2s;
+}
+
+.hint.ok {
+  color: #2D7A4F;
+  font-weight: 500;
+}

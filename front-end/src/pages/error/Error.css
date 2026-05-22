@@ -1,0 +1,71 @@
+.error-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--crema) 0%, var(--crema-oscuro) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.error-card {
+  background: var(--blanco);
+  border: 1px solid var(--dorado-claro);
+  padding: 56px 48px;
+  max-width: 480px;
+  width: 100%;
+  text-align: center;
+}
+
+.error-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.error-icon-warning {
+  background: #FFF8E1;
+  color: #B8860B;
+}
+
+.error-icon-info {
+  background: #EEF6FF;
+  color: #185FA5;
+}
+
+.error-icon-danger {
+  background: #FFEBEE;
+  color: var(--error);
+}
+
+.error-code {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5rem;
+  font-weight: 300;
+  color: var(--dorado-claro);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.error-card h1 {
+  font-size: 1.8rem;
+  margin-bottom: 14px;
+  color: var(--negro);
+}
+
+.error-desc {
+  font-size: 0.88rem;
+  color: var(--gris);
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+
+.error-acciones {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}

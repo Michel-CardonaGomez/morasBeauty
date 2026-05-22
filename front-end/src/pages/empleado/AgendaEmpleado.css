@@ -1,0 +1,168 @@
+.agenda-page { min-height: 100vh; }
+
+.agenda-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px;
+}
+
+.agenda-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.agenda-header h1 { font-size: 2.2rem; margin-bottom: 6px; }
+
+.agenda-fecha {
+  font-size: 0.85rem;
+  color: var(--gris);
+  text-transform: capitalize;
+}
+
+.agenda-stats {
+  display: flex;
+  gap: 20px;
+}
+
+.stat {
+  text-align: center;
+  background: var(--blanco);
+  border: 1px solid var(--dorado-claro);
+  padding: 14px 20px;
+  min-width: 80px;
+}
+
+.stat-num {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  color: var(--dorado);
+  line-height: 1;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--gris);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+/* TABLA */
+.agenda-tabla {
+  border: 1px solid var(--dorado-claro);
+  overflow: hidden;
+}
+
+.agenda-fila {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  border-bottom: 1px solid var(--dorado-claro);
+  min-height: 56px;
+}
+
+.agenda-fila:last-child { border-bottom: none; }
+
+.agenda-fila.ocupada { background: var(--blanco); }
+.agenda-fila.libre   { background: var(--crema); }
+
+.agenda-hora {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--gris);
+  border-right: 1px solid var(--dorado-claro);
+  background: var(--crema-oscuro);
+}
+
+.agenda-cita {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 16px;
+}
+
+.agenda-cita.estado-completada {
+  background: #F0FBF4;
+  border-left: 3px solid var(--exito);
+}
+
+.agenda-cita.estado-pendiente {
+  background: #FFFDF0;
+  border-left: 3px solid var(--dorado);
+}
+
+.agenda-cita.estado-cancelada {
+  background: #FFF5F5;
+  border-left: 3px solid var(--error);
+  opacity: 0.7;
+}
+
+.cita-nombre-servicio {
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.cita-horario {
+  font-size: 0.8rem;
+  color: var(--gris);
+  margin-bottom: 2px;
+}
+
+.cita-nota-emp {
+  font-size: 0.78rem;
+  color: var(--gris);
+  font-style: italic;
+}
+
+.cita-acciones-emp {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.badge-emp {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.badge-emp.estado-pendiente  { background: #FFF8E1; color: #B8860B; }
+.badge-emp.estado-completada { background: #E8F5E9; color: #2D7A4F; }
+.badge-emp.estado-cancelada  { background: #FFEBEE; color: #D64545; }
+
+.btn-completar {
+  background: var(--dorado);
+  color: var(--blanco);
+  border: none;
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-completar:hover { background: var(--dorado-oscuro); }
+
+.agenda-libre {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 0.78rem;
+  color: var(--gris);
+  font-style: italic;
+}

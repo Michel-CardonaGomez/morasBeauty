@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Cita {
+  id         String     @id @default(uuid())
+  clienteId  String     @map("cliente_id")
+  empleadoId String     @map("empleado_id")
+  servicioId String     @map("servicio_id")
+  fecha      DateTime   @db.Date
+  horaInicio String     @map("hora_inicio")
+  horaFin    String     @map("hora_fin")
+  estado     EstadoCita @default(pendiente)
+  notas      String?
+  creadoEn   DateTime   @default(now()) @map("creado_en")
+
+  @@map("citas")
+}
+
+enum EstadoCita {
+  pendiente
+  completada
+  cancelada
+}

@@ -1,0 +1,175 @@
+.inicio {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, var(--crema) 0%, var(--crema-oscuro) 100%);
+  border-bottom: 1px solid var(--dorado-claro);
+  padding: 100px 48px;
+  text-align: center;
+}
+
+.hero-sub {
+  font-size: 20px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--dorado);
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  color: var(--negro);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-desc {
+  font-size: 18px;
+  color: var(--gris);
+  margin-bottom: 36px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* SERVICIOS */
+.servicios-section {
+  padding: 80px 48px;
+  text-align: center;
+}
+
+.servicios-section h2 {
+  font-size: 2.2rem;
+  color: var(--negro);
+  margin-bottom: 8px;
+}
+
+.seccion-sub {
+  font-size: 18px;
+  color: var(--gris);
+  margin-bottom: 48px;
+  letter-spacing: 0.5px;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.servicio-card {
+  background: var(--blanco);
+  border: 3px solid var(--dorado-claro);
+  text-decoration: none;
+  color: var(--negro);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.servicio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(201, 168, 76, 0.15);
+}
+
+.servicio-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.servicio-info {
+  padding: 20px;
+  text-align: left;
+}
+
+.servicio-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.servicio-precio {
+  color: var(--dorado);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.servicio-duracion {
+  font-size: 0.8rem;
+  color: var(--gris);
+}
+
+/* CARRUSEL RESEÑAS */
+.resenas-section {
+  background: var(--crema-oscuro);
+  padding: 80px 48px;
+  text-align: center;
+  border-top: 1px solid var(--dorado-claro);
+}
+
+.resenas-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.carrusel {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.resena-card {
+  background: var(--blanco);
+  border: 1px solid var(--dorado-claro);
+  padding: 40px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.resena-estrellas {
+  display: flex;
+  gap: 4px;
+}
+
+.resena-contenido {
+  font-size: 1rem;
+  color: var(--negro);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.resena-autor {
+  font-size: 0.85rem;
+  color: var(--dorado);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.carrusel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: var(--dorado-claro);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.dot.active {
+  background: var(--dorado);
+}
